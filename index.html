@@ -41,8 +41,8 @@ function updateJoystick(e){
   const max=Math.min(r.width,r.height)*.34;
   const d=Math.hypot(x,y);
   if(d>max){x=x/d*max;y=y/d*max}
-  mobileMove.x=-x/max;
-  mobileMove.y=-y/max;
+  mobileMove.x=x/max;
+  mobileMove.y=y/max;
   const joyLength=Math.hypot(mobileMove.x,mobileMove.y);
   if(joyLength>.14){
     const targetFacing=Math.atan2(mobileMove.x,-mobileMove.y);
